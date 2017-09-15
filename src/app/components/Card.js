@@ -1,5 +1,6 @@
 import React from "react";
 import { Checklist } from "./Checklist";
+import {Search} from "./Search";
 
 export class Card extends React.Component {
   constructor(){
@@ -21,13 +22,30 @@ export class Card extends React.Component {
         </div>
       );
     };
+
+    let sideColor = {
+      position: 'absolute',
+      zIndex: -1,
+      top:0,
+      bottom: 0,
+      left: 0,
+      width: 7,
+      backgroundColor: this.props.color
+    };
     return(
       <div className="card">
-        <div className="card__title" onClick={this.toggleDetails.bind(this)}
+        <div style={sideColor}/>
+        <div className={this.state.showDetails? "card__title card__title--is-open" : "card__title"}onClick={this.toggleDetails.bind(this)}
 
         >{this.props.title}</div>
         {cardDetails}
+        <Search/>
       </div>
     );
   }
 }
+
+// Card.propTypes = {
+//   title: PropTypes.string,
+//   cards: PropTypes.arrayOf(PropTypes.object)
+// }
