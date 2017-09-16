@@ -19,3 +19,7 @@ export class KanbanBoard extends React.Component {
         );
     }
 }
+
+// KanbanBoard.propTypes = {
+//   cards: PropTypes.arrayOf(PropTypes.object)
+// };
