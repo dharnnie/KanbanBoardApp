@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import {render} from "react-dom"
 
-import { KanbanBoard } from "./components/KanbanBoard";
+import { KanbanBoardContainer } from "./containers/KanbanBoardContainer";
 
 let cardsList = [
      {
@@ -62,4 +62,4 @@ let cardsList = [
        }
 ];
 
-render( <KanbanBoard cards = { cardsList }/> , document.getElementById("root"));
+render( <KanbanBoardContainer /> , document.getElementById("root"));
