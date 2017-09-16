@@ -19,15 +19,13 @@ export class KanbanBoardContainer extends Component {
     fetch(API_URL+'/cards', {headers: API_HEADERS})
     .then((response)=> response.json())
     .then((responseData)=>{
-      this.setState({
-        cards:responseData
-      })
+      this.setState({cards:responseData});
     })
     .catch((error) => {
       console.log('Error fetching and parsing data', error);
     });
   }
   render(){
-    return <KanbanBoard cards={this.state.cards}/>
+    return <KanbanBoard cards={this.state.cards} />
   }
 }
