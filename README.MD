@@ -7,3 +7,5 @@ The application is setup with webpack so you can't simply run by clicking the in
 - In your terminal, navigate to the root "/reactvlog"
 - Run "npm run build" or "npm start"
 - Open your web-browser and visit - localhost:5000
+
+There are a few differences in the App architecture from Cassio's
